@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<style>
+  .donut-chart {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .donut-chart-slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #000;
+    transition: 0.5s;
+  }
+
+  .donut-chart-slice:first-child {
+    background-color: #ff0;
+  }
+
+  .donut-chart-slice:nth-child(2) {
+    background-color: #0a0;
+  }
+
+  .donut-chart-slice:nth-child(3) {
+    background-color: #00f;
+  }
+
+  .donut-chart-slice:before {
+    content: attr(data-value);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #fff;
+  }
+</style>
+
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <div style="color: blue">1.홍길동</div>
+    <div style="background-color: yellow">2.이몽룡</div>
+    <div>
+      div와 같은 box tag는 포함하는 content의 크기와 상관없이 화면 width 전체를
+      영역으로 지정한다. tag가 포함하며 browser에 보여지는 것을을 모두 content
+      라고 한다
+    </div>
+    <div>3.성춘향</div>
+    <div>4.임꺽정</div>
+    <div>5.장녹수</div>
+
+    <div class="donut-chart">
+      <div class="donut-chart-slice" data-value="50"></div>
+      <div class="donut-chart-slice" data-value="25"></div>
+      <div class="donut-chart-slice" data-value="25"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+header {
+  background-color: green;
+  color: white;
+  text-align: center;
+  /* 
+  rem은 주변 글자 크기에 따라서 비례적으로 단위를 적용한다. 기본값은 16px대비 비율로 표현한다. 
+  1rem : 16px;
+  1.2rem : (16 * 1.2)px;
+  */
+  padding: 1rem;
+}
+h1 {
+  /* border: 3px solid yellow; */
+}
+nav {
+  background-color: blue;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  padding: 16px;
+  display: inline-block;
+  border: 1px solid white;
+}
+section {
+  border: 1px solid green;
+}
+article {
+  border: 1px solid red;
+  margin: 10px;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: #52a84f; */
+}
