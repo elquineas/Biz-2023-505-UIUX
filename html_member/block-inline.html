@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLock and Inline Tag</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+      p {
+        border: 1px solid blue;
+        padding: 5px;
+      }
+      div {
+        border: 1px solid red;
+        margin: 10px;
+      }
+      div.div3 {
+        padding: 5px;
+        width: 100px;
+      }
+      div.div4 {
+        width: 200px;
+      }
+      section {
+        text-align: center;
+      }
+      section > div {
+        border: 1px solid green;
+        width: 200px;
+        padding: 20px;
+      }
+      article > div {
+        border: 2px solid blue;
+        display: inline-block;
+        width: 150px;
+      }
+      article > div:nth-of-type(1) {
+        padding: 20px;
+      }
+      article > div:nth-of-type(2) {
+        background-color: yellowgreen;
+        padding: 20px 10px;
+      }
+      article > div:nth-of-type(3) {
+        padding: 20px 30px 40px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Block Tag</h1>
+    <p>
+      Block tag는 content가 없어도 width는 full set 이다. 좌우 화면에 가득 찬다
+    </p>
+    <p>
+      Block tag에 content가 없으면 height는 없다. 그래서 Block tag에 border를
+      설정하면 한 라인으로 보인다
+    </p>
+    <div>div tag는 margin 기본값이 0이다</div>
+    <div>div</div>
+    <div class="div3">div</div>
+    <div class="div4">div</div>
+    <section>
+      <div class="div5">div5</div>
+      <div class="div6">div6</div>
+      <div class="div7">div7</div>
+    </section>
+    <article>
+      <div class="div5">div5</div>
+      <div class="div6">div6</div>
+      <div class="div7">div7</div>
+    </article>
+  </body>
+</html>
