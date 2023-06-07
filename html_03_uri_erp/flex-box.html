@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        display: flex;
+
+        /* 배치방향 */
+        /* flex-direction: column; */
+        flex-direction: row;
+
+        /* 줄바꿈안함 */
+        /* flex-wrap: nowrap; */
+        /* 자동줄바꿈 */
+        flex-wrap: wrap;
+
+        /* direction 과 wrap을 동시에 쓸대 */
+        /* flex-flow: row wrap; */
+      }
+      div {
+        /* flex-frow   : 늘어나는 박스의 크기를 비율로 조정 
+           flex-shrink : 줄어드는 박스의 크기를 비율로 조정
+           flex-basis  : 박스의 기본 크기 지정 (auto가 기본) 
+           세가지를 동시에 쓰는법 
+           flex : 0 1 auto */
+
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 200px;
+        /* flex: 0 1 100px; */
+        border: 1px solid green;
+        padding: 1rem;
+        margin: 5px;
+        /* width: 200px; */
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+      <div>flex item</div>
+    </section>
+  </body>
+</html>
