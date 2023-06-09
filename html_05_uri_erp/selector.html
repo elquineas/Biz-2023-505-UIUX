@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      section {
+        width: 100%;
+        height: 100%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+      div {
+        width: 50%;
+        height: 15%;
+        margin: 10px auto;
+        border: 1px solid blue;
+      }
+      #data {
+        text-align: center;
+        font-size: 30px;
+      }
+      #jb {
+        width: 100%;
+        height: 100px;
+        transition-duration: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="main" id="div1">div</div>
+      <div class="main" id="div2">div</div>
+      <div class="main" id="div3">div</div>
+      <div class="main" id="div4">div</div>
+      <div class="main" id="div5">div</div>
+      <!-- <div class="main" id="data">0</div>
+      <button id="up">Up button</button>
+      <button id="down">Down button</button>
+      <progress value="0" max="100" id="jb"></progress> -->
+    </section>
+  </body>
+
+  <script>
+    const div1 = document.querySelector("#div1");
+    div1.style.backgroundColor = "Yellow";
+
+    function textChange() {}
+    const backgroundChange = function () {
+      const div2 = document.querySelector("#div2");
+      div2.style.backgroundColor = "green";
+    };
+    div1.addEventListener("click", backgroundChange);
+
+    // const up = document.querySelector("#up");
+    // var sum = 0;
+    // const countUp = function () {
+    //   sum = sum + 1;
+    //   document.getElementById("data").innerHTML = sum;
+    //   jbFunc();
+    // };
+    // up.addEventListener("click", countUp);
+
+    // const down = document.querySelector("#down");
+    // const countDown = function () {
+    //   sum = parseInt(sum) - parseInt(1);
+    //   document.getElementById("data").innerHTML = sum;
+    //   jbFunc();
+    // };
+    // down.addEventListener("click", countDown);
+
+    // function jbFunc() {
+    //   document.getElementById("jb").value = sum;
+    // }
+
+    const divs = document.querySelectorAll("div");
+    divs[2].style.backgroundColor = "red";
+
+    for (let index = 0; index < divs.length; index++) {
+      divs[index].innerText = index + 1;
+    }
+
+    const divClass = document.querySelectorAll(".main");
+    const num1Member = document.querySelectorAll(".main")[1];
+  </script>
+</html>
