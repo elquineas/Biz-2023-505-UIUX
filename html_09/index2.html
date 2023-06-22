@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    table {
+      width: 80%;
+      margin: 10px auto;
+      text-align: center;
+      border: none;
+    }
+    tr,
+    td,
+    th {
+      border: none;
+    }
+    table.table1 {
+      /* border: 1px solid blue; */
+      border-collapse: separate;
+      border-collapse: collapse;
+    }
+    table.table1 tr {
+      border-bottom: 1px solid #ddd;
+    }
+    table.table1 td,
+    table.table1 th {
+      border-right: 1px solid #ddd;
+      border-left: 1px solid #eee;
+    }
+
+    table.table2 {
+      border-collapse: separate;
+      border-spacing: 5px;
+      border-style: dashed;
+    }
+    table.table2 td,
+    table.table2 th {
+      border: 1px dashed mediumseagreen;
+    }
+
+    table.table3 {
+      border-collapse: collapse;
+    }
+    table.table3 tr:nth-child(even) {
+      background-color: #aaa;
+    }
+    table.table3 tr:nth-child(odd) {
+      background-color: #ddd;
+    }
+  </style>
+  <body>
+    <table class="table1" border="1">
+      <tr>
+        <th>이름</th>
+        <th>주소</th>
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <td colspan="2">1</td>
+        <!-- <td>1</td> -->
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+    </table>
+
+    <table class="table2" border="2">
+      <tr>
+        <th>이름</th>
+        <th>주소</th>
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2</td>
+        <td rowspan="2">2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3</td>
+        <!-- <td>3</td> -->
+      </tr>
+    </table>
+
+    <table class="table3" border="1">
+      <tr>
+        <th>이름</th>
+        <th>주소</th>
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+    </table>
+  </body>
+</html>
